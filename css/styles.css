@@ -1,16 +1,18 @@
 .button {
     background-color:purple; /* Green */
-    border: solid;
+    border:none;
     color: orange;
-    padding: 15px 32px;
-    
+    padding: 0px ;
+    height: 100%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    width:100%;
 }
 
 .theButtons{
+    margin: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,4 +20,24 @@
 
  body{
      background: black
- }   
+ } 
+ 
+ img{
+    border-radius:10%;
+    max-width: 100%;
+    
+ }
+ .row {
+    display: flex;
+    
+}
+
+.column {
+    flex: 50%;
+     
+}
+div{
+    font-size: 32px
+}
+ 
+ 
