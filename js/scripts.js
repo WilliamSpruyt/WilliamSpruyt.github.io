@@ -3,22 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.collapsible');
    
 });
-var synth = window.speechSynthesis;
-
-var play = document.getElementById('#play');
-var inputTxt = document.querySelector('.txt');
-
-var voiceSelect = document.querySelector('select');
-
-var pitch = 1
-var pitchValue = 1
-var rate = 1
-var rateValue = 1
+ 
 
 var voices = [];
-
+ 
 hour = 0;
 minute = 0;
+timechangecheck="";
+timeCounter=0;
+typespeed=50;
 
 $(document).ready(function () {
   $('.collapsible').collapsible();
@@ -48,17 +41,21 @@ function step(timestamp) {
 	  hour=d.getHours();
 	 minute=d.getMinutes();
 	   
-  var theTime=wordTimeMaker(hour,minute);
-if (document.getElementById("timeReadOut").innerHTML !== 'it\'s '+theTime){
-	 
-	$(timeReadOut).removeClass("animated pulse"),console.log(timestamp);
-    setTimeout(function(){ $(timeReadOut).addClass("animated pulse"); }, 10);  
-	
-	 	 
+  var theTime="it\'s "+wordTimeMaker(hour,minute);
+  
+if (theTime!==timechangecheck){
+    
+
+  document.getElementById("timeReadOut").innerHTML = timechangecheck;
+    
+     
+    timechangecheck=theTime.slice(0,timeCounter);
+	 	timeCounter+=1;
 	
 	
 	}
-document.getElementById("timeReadOut").innerHTML = 'it\'s '+theTime;
+  else{timeCounter=0;document.getElementById("timeReadOut").innerHTML = theTime;}
+ 
    
     window.requestAnimationFrame(step);
   
@@ -75,53 +72,6 @@ document.getElementById("timeReadOut").innerHTML = 'it\'s '+theTime;
 	return wordTime;
 	 
  }
- function populateVoiceList() {
-  voices = synth.getVoices();
-  var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-  voiceSelect.innerHTML = '';
-  for(i = 0; i < voices.length ; i++) {
-    var option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
-    
-    if(voices[i].default) {
-      option.textContent += ' -- DEFAULT';
-    }
+ 
+  
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
-    voiceSelect.appendChild(option);
-  }
-  voiceSelect.selectedIndex = selectedIndex;
-}
-populateVoiceList();
-if (speechSynthesis.onvoiceschanged !== undefined) {
-  speechSynthesis.onvoiceschanged = populateVoiceList;
-}
-
-function speak(){
-	 var d = new Date();
-	  hour=d.getHours();
-	  minute=d.getMinutes();
-  inputTxt='its ' + wordTimeMaker(hour,minute);
-  console.log(inputTxt.value);
-  if(inputTxt.value !== ''){
-    var utterThis = new SpeechSynthesisUtterance(inputTxt);
-    var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-    for(i = 0; i < voices.length ; i++) {
-      if(voices[i].name === selectedOption) {
-        utterThis.voice = voices[i];
-      }
-    }
-    utterThis.pitch = pitch;
-    utterThis.rate = rate;
-    synth.speak(utterThis);
-  }
-}
-
-i.onsubmit = function(event) {
-  event.preventDefault();
-
-  speak();
-
-   
-}

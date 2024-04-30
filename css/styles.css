@@ -46,13 +46,12 @@
  }
  #timeReadOut{
 	font-family: 'Permanent Marker', cursive;
-	font-size:400%;
+	font-size:200%;
+    background-color: white;
 	color:orange;
-	-webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
-    transform: translateZ(0);
-	margin:15%;
-	margin-bottom:30%;
+	
+     
+	
 }
 #play{
 	font-family: 'Permanent Marker', cursive;
@@ -85,7 +84,12 @@
 }
 
 button:focus {outline:0;}
+
+
+
+
  
+
 
  
  
