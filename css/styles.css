@@ -1,47 +1,10 @@
-.button {
-    background-color:purple; /* Green */
-    border:none;
-    color: orange;
-    padding: 0px ;
-    height: 100%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width:100%;
-}
-.buttonB {
-    background-color:orange; /* Green */
-    border:none;
-    color: purple;
-    padding: 0px ;
-    height: 100%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width:100%;
-}
 
-.theButtons{
-    margin: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;}
 
- body{
-     background: grey
-
- }
-
- .hoverboy:hover {
-    background-color: orange;
- }
- 
-  
  .face {
      width:50%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
       
  }
  #timeReadOut{
@@ -53,40 +16,14 @@
      
 	
 }
-#play{
-	font-family: 'Permanent Marker', cursive;
-	font-size:100%;
-	color:red;
-	border-radius:15%;
-	float:left;
+body{
+    background-color: black;
 }
-#chooser{
-	font-family: 'Permanent Marker', cursive;
-	font-size:100%;
-	color:green;
-	float:left;
-	 
+.darkbody {
+    color: white;
+    background-color: black;
 }
-#chooserLabel{
-	font-family: 'Permanent Marker', cursive;
-	font-size:100%;
-	color:blue;
-	margin-left:15%;
-	float:left;
-}
-.center-wrapper {
-  margin:15%;
-}
-.center-content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); 
-}
-
-button:focus {outline:0;}
-
-
-
+.alignleft{text-align: left;}
 
  
 
