@@ -30,7 +30,7 @@ $(document).ready(function () {
   HOURWORDS = ['midnight', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'noon',
     'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven'];
   window.requestAnimationFrame(step);
-
+  
   document.getElementById("daysOld").innerHTML = daysOld;
 });
 
