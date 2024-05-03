@@ -1,5 +1,8 @@
 .bigheading{ 
-    font-size: 5em;
+    font-size: 3em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
  .face {
@@ -35,6 +38,9 @@ body{
 .alignleft{text-align: left;}
 
 .help{ background-color: blueviolet;}
+
+.justify{text-align: justify;
+text-justify: inter-word;}
 
 
 
