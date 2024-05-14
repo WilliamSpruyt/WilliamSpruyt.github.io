@@ -15,6 +15,7 @@ typespeed=50;
 
 $(document).ready(function () {
   $('.collapsible').collapsible();
+
   var date1 = new Date();
 
 
@@ -72,6 +73,7 @@ if (theTime!==timechangecheck){
 	return wordTime;
 	 
  }
+ 
  
   
 

@@ -1,7 +1,7 @@
 .bigheading{ 
     font-size: 3em;
     display: block;
-    margin-left: auto;
+    margin-left: 3%;
     margin-right: auto;
 }
 
@@ -37,10 +37,14 @@ body{
 }
 .alignleft{text-align: left;}
 
+.alignright{text-align: right; margin-right: 3%}
+
 .help{ background-color: blueviolet;}
 
 .justify{text-align: justify;
 text-justify: inter-word;}
+
+.example{ font-size: smaller; margin-left: 10%;margin-right: 10%;}
 
 
 
