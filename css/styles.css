@@ -5,6 +5,14 @@
     margin-right: auto;
 }
 
+.smallheading{ 
+    font-size: 1em;
+    display: block;
+    margin-left: 3%;
+    margin-right: auto;
+}
+
+
  .face {
      width:70%;
      display: block;
